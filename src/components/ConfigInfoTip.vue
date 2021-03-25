@@ -6,8 +6,7 @@
       <path d="M7.5,1C3.9,1,1,3.9,1,7.5S3.9,14,7.5,14 S14,11.1,14,7.5S11.1,1,7.5,1z M7.5,13C4.5,13,2,10.5,2,7.5C2,4.5,4.5,2,7.5,2S13,4.5,13,7.5C13,10.5,10.5,13,7.5,13z" fill-rule="evenodd" clip-rule="evenodd" fill="#666766" />
     </svg>
     <span class="tooltiptext">
-      Learn how to set up and use this extension in the <a href="https://glitch.com/edit/#!/what-if-extension?path=README.md" target="_blank"><b>documentation</b></a
-      >.
+      Visit the Tableau Extension Gallery at extensiongallery.tableau.com to learn how to set up and use this extension!
     </span>
   </div>
 </template>
@@ -56,7 +55,7 @@ a:focus {
   font-family: 'Benton Sans', Arial, Helvetica, sans-serif;
   font-size: 11px;
   padding: 8px;
-  width: 150px;
+  width: 200px;
   position: absolute;
   z-index: 1;
   right: 0px;
