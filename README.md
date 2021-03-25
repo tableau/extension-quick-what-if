@@ -1,4 +1,4 @@
-# Quick What-If Extension
+# Quick What-If
 
 A dashboard extension that allows you to create a list of controllable inputs based on values of a dimension for quick what-if analysis.
 
@@ -10,10 +10,10 @@ Imagine, you're a manager at Superstore and you're using Tableau to do a simple 
 
 ## How to use it
 
-1. Before bringing in the extension make sure you have at least one worksheet on the dashboard that contains the dimension you want to pull values from.
+1. Before bringing in the extension make sure you have at least one worksheet on the dashboard that contains the dimension you want to pull values from. For example, if you wanted to do what-if analysis on the product categories like in the above image, you would need a worksheet on your dashboard with the "Category" dimension.
 1. Next make a new **string** parameter that accepts **all** values. This will be your storage parameter where all input values are kept.
 1. Now that your dashboard is set up, drag in a new extension object to your dashboard and select the Quick What-If extension.
-1. In the configuration pop up select your storage parameter and choose which worksheet and field you want to generate a list of inputs for.
+1. In the configuration pop up select your storage parameter (which you made in step 2) and choose which worksheet and field you want to generate a list of inputs for.
 1. Select how and when you want the inputs displayed within the options (more details below).
 1. Save the configuration.
 1. Create a new calculation with the following formula: `{FIXED [Dimension]: MIN(FLOAT(REGEXP_EXTRACT([Parameter], [Dimension]+"\|(-?\d*\.?,?\d*)")))}`
