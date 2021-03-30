@@ -22,7 +22,7 @@ export default {
     },
     emitValue: function(event) {
       const input = event.target.value;
-      const cleaned = input.replace(/[^0-9().,-]/g, '') || 0;
+      const cleaned = input.replace(/[^0-9.-]/g, '') || 0;
       event.target.value = cleaned;
       this.$emit('set-value', cleaned);
     },

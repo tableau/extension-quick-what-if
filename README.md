@@ -16,7 +16,7 @@ Imagine, you're a manager at Superstore and you're using Tableau to do a simple 
 1. In the configuration pop up select your storage parameter (which you made in step 2) and choose which worksheet and field you want to generate a list of inputs for.
 1. Select how and when you want the inputs displayed within the options (more details below).
 1. Save the configuration.
-1. Create a new calculation with the following formula: `{FIXED [Dimension]: MIN(FLOAT(REGEXP_EXTRACT([Parameter], [Dimension]+"\|(-?\d*\.?,?\d*)")))}`
+1. Create a new calculation with the following formula: `{FIXED [Dimension]: MIN(FLOAT(REGEXP_EXTRACT([Parameter], [Dimension]+"\|(-?\d*\.?\d*)")))}`
    where **Dimension** is the field you want to generate an input for and **Parameter** is your parameter.
 1. Add this calculation to a view with your dimension.
 1. Adjust the inputs in the extension to do your what-if analysis!
