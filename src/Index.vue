@@ -214,9 +214,10 @@ body {
 }
 
 .unitLabel {
-  width: 100%;
-  text-align: end;
-  padding-right: 50px;
+  min-width: 100px;
+  text-align: center;
+  padding-right: 5px;
+  margin-left: auto;
 }
 
 .tip {
