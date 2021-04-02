@@ -53,15 +53,16 @@ export default {
   },
   methods: {
     // Opens configuration dialog and rebuilds inputs after closing.
-    configure: function() {
-      tableau.extensions.ui
-        .displayDialogAsync(`${this.baseURL}/config.html`, '', {
-          width: 350,
-          height: 550,
-        })
-        .then(() => {
-          this.getMembers();
-        });
+    configure: async function() {
+      await tableau.extensions.ui.displayDialogAsync(`${this.baseURL}/config.html`, '', {
+        width: 350,
+        height: 550,
+      });
+      this.getMembers();
+    },
+    // Handles regex for reading delimited values in parameter
+    getRegex: function(label) {
+      return new RegExp(label + '\\|(-?\\d*\\.?\\,?\\d*)');
     },
     // Event handler for marks selection.
     markSelected: async function(marksEvent) {
@@ -136,7 +137,7 @@ export default {
       // Pull matching values from parameter that have already been set
       let currentValues = parameter.currentValue.value;
       this.values = [...members].map((member) => {
-        const regex = new RegExp(member + '\\|(-?\\d*\\.?\\,?\\d*)');
+        const regex = this.getRegex(member);
         let value = currentValues.match(regex) ? currentValues.match(regex)[1] : '0';
         return { name: member, value };
       });
@@ -157,7 +158,7 @@ export default {
       if (!parameter) return (this.validConfig = false);
       let currentValues = parameter.currentValue.value;
       this.values = [...this.values].map((member) => {
-        const regex = new RegExp(member.name + '\\|(-?\\d*\\.?\\,?\\d*)');
+        const regex = this.getRegex(member.name);
         let value = currentValues.match(regex) ? currentValues.match(regex)[1] : '0';
         return { name: member.name, value };
       });

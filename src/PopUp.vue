@@ -39,14 +39,13 @@ export default {
     },
   },
   // Initialize the extension
-  created: function() {
-    tableau.extensions.initializeDialogAsync().then(async (payload) => {
-      payload = JSON.parse(payload);
-      this.values = payload.values;
-      this.selected = payload.selected;
-      this.showAll = payload.showAll;
-      this.unitLabel = payload.unitLabel;
-    });
+  created: async function() {
+    let payload = await tableau.extensions.initializeDialogAsync();
+    payload = JSON.parse(payload);
+    this.values = payload.values;
+    this.selected = payload.selected;
+    this.showAll = payload.showAll;
+    this.unitLabel = payload.unitLabel;
   },
 };
 </script>
