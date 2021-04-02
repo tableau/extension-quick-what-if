@@ -46,12 +46,16 @@ export default {
       selectBtnLabel: 'Select',
     };
   },
+  computed: {
+    baseURL: function() {
+      return window.location.origin.includes('localhost:8080') ? window.location.origin : '.';
+    },
+  },
   methods: {
     // Opens configuration dialog and rebuilds inputs after closing.
     configure: function() {
-      const baseURL = window.location.origin.includes('localhost:8080') ? window.location.origin : '.';
       tableau.extensions.ui
-        .displayDialogAsync(`${baseURL}/config.html`, '', {
+        .displayDialogAsync(`${this.baseURL}/config.html`, '', {
           width: 350,
           height: 550,
         })
@@ -85,10 +89,9 @@ export default {
       let showAll = this.display === 0;
       if (this.location === 0) {
         let payload = JSON.stringify({ values: this.values, selected: this.selected, showAll, unitLabel: this.unitLabel });
-        const baseURL = window.location.origin.includes('localhost:8080') ? window.location.origin : '.';
 
         try {
-          await tableau.extensions.ui.displayDialogAsync(`${baseURL}/popup.html`, payload, {
+          await tableau.extensions.ui.displayDialogAsync(`${this.baseURL}/popup.html`, payload, {
             width: 350,
             height: Math.min(350, (showAll ? this.values.length : markCount) * 30 + 25),
           });
