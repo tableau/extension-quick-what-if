@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test:e2e --headless"
@@ -10,6 +11,7 @@
   "dependencies": {
     "@tableau/tableau-ui": "^3.2.0",
     "core-js": "^3.9.1",
+    "npm-force-resolutions": "^0.0.10",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "vue": "^2.6.11",
@@ -28,8 +30,11 @@
     "vue-template-compiler": "^2.6.11"
   },
   "resolutions": {
-    "lodash": "^4.17.21",
-    "minimist": "^1.2.5",
-    "yargs-parser": "^20.2.7"
+    "is-svg": ">=4.2.2",
+    "lodash": ">=4.17.21",
+    "minimist": ">=1.2.5",
+    "node-notifier": ">=8.0.1",
+    "ssri": ">=8.0.1",
+    "yargs-parser": ">=20.2.7"
   }
 }

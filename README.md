@@ -33,6 +33,9 @@ Note: If you are using options that eliminate the need for the inline dashboard 
 
 ## How to install for local use
 
+1. Make sure you have [Node.js](https://nodejs.org) installed.
+1. Clone or download and unzip this repository. Open the command line to the `extension-quick-what-if` master folder and run `npm install` to install the node modules.
+1. In the command line run `npm run build` to build the extension.
 1. Copy the files in the `dist` folder to your web server.
 1. Update the existing or create a new manifest file (.trex) to point to the URL where you are hosting the extension.
 
