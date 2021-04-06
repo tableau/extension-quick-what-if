@@ -31,6 +31,8 @@ Imagine, you're a manager at Superstore and you're using Tableau to do a simple 
 
 Note: If you are using options that eliminate the need for the inline dashboard zone to be displayed you can simply hide the extension by floating it and making it 1x1 pixel. You can always find it later in the layout pane.
 
+![](./quick_what-if_setup.gif)
+
 ## How to install for local use
 
 1. Make sure you have [Node.js](https://nodejs.org) installed.
