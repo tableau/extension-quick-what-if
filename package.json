@@ -35,6 +35,9 @@
     "minimist": ">=1.2.5",
     "node-notifier": ">=8.0.1",
     "ssri": ">=8.0.1",
-    "yargs-parser": ">=20.2.7"
+    "yargs-parser": ">=20.2.7",
+    "hosted-git-info": ">=2.8.9",
+    "postcss": ">=8.2.10",
+    "browserslist": ">=4.16.5"
   }
 }
