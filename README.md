@@ -1,6 +1,11 @@
+[![As-Is](https://img.shields.io/badge/Support%20Level-As--Is-e8762c.svg)](https://www.tableau.com/support-levels-it-and-developer-tools)
+
 # Quick What-If
 
 A dashboard extension that allows you to create a list of controllable inputs based on values of a dimension for quick what-if analysis.
+
+## Using the Extension from Tableau Exchange (Recommended)
+See the Tableau Help topic [Use Dashboard Extensions](https://help.tableau.com/current/pro/desktop/en-us/dashboard_extensions.htm) for directions. When presented with the list of available Dashboard Extensions, search for Quick What-If to find and install this one.
 
 ## What it does
 
@@ -33,7 +38,8 @@ Note: If you are using options that eliminate the need for the inline dashboard 
 
 ![](./quick_what-if_setup.gif)
 
-## How to install for local use
+## Download the Extension Code to Develop Locally
+If you want to use a locally-built version of this extension or if you want to make any of your own changes, follow these steps:
 
 1. Make sure you have [Node.js](https://nodejs.org) installed.
 1. Clone or download and unzip this repository. Open the command line to the `extension-quick-what-if` master folder and run `npm install` to install the node modules.
@@ -42,5 +48,6 @@ Note: If you are using options that eliminate the need for the inline dashboard 
 1. Update the existing or create a new manifest file (.trex) to point to the URL where you are hosting the extension.
 
 ## Support
+Tableau customers can contact the Tableau Support team for help.
 
-If you have questions about the extension or found a bug please open a new [issue](https://github.com/tableau/extension-quick-what-if/issues).
+For any local build or code related questions, please post to the [Issues](https://github.com/tableau/extension-quick-what-if/issues) tab here for community support.
